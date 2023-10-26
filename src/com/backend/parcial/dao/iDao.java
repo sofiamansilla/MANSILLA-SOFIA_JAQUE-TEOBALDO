@@ -1,4 +1,4 @@
 package com.backend.parcial.dao;
 
-public interface iDao {
+public interface iDao <T>{
 }
