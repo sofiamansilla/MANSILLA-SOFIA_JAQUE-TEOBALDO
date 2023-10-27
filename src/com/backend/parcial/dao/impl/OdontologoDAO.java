@@ -1,22 +1,17 @@
-package com.backend.parcial.dao;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-
-public class H2Connection {
+package com.backend.parcial.dao.impl;
 
 
-    public static Connection getConnection() throws ClassNotFoundException, SQLException {
-//        Class.forName("org.h2.Driver");
+import com.backend.parcial.dao.IDao;
+import com.backend.parcial.model.Odontologo;
+import org.apache.log4j.Logger;
 
-        String strConn = "jdbc:h2:~/bbdd";
-        String user = "sa";
-        String password = "1234";
+import java.util.List;
 
-        return DriverManager.getConnection(strConn,user,password);
-    }
+public class OdontologoDAO implements IDao<Odontologo> {
 
+    private final Logger LOGGER = Logger.getLogger(OdontologoDAO.class);
+    @Override
+    public Odontologo findById(int id) {
 
 
 
@@ -42,4 +37,25 @@ public class H2Connection {
 //        }
 //    }
 
-}
+
+
+
+
+        return null;
+    }
+
+    @Override
+    public Odontologo create(Odontologo odontologo) {
+        return null;
+    }
+
+    @Override
+    public Odontologo registrar(Odontologo odontologo) {
+        return null;
+    }
+
+    @Override
+    public List<Odontologo> listarTodos() {
+        return null;
+    }
+};
