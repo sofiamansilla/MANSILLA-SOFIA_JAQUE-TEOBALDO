@@ -1,6 +1,8 @@
 package com.backend.parcial;
 
 import com.backend.parcial.dao.H2Connection;
+import com.backend.parcial.dao.impl.OdontologoDAO;
+import org.apache.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,34 +11,28 @@ import java.sql.Statement;
 
 public class Application {
 
+    private static final Logger LOGGER = Logger.getLogger(OdontologoDAO.class);
     public static void main(String[] args) {
 
-        String strCon = "jdbc:h2:~/integradora";
+        String strCon = "jdbc:h2:~/odontologos";
         String user = "sa";
         String pass = "1234";
 
         try {
             Connection conn = DriverManager.getConnection(strCon,user,pass);
 
-            /*INSERTAR LOGGER INFO, CONEXION EXITOSA*/
 
-            System.out.println("conexion exitosa");
+            LOGGER.info("Conexión exitosa");
 
-            /*INSERTAR STATEMENT*/
 
-            String insert = "INSERT INTO TEST (NAME, ID) VALUES ('SOFIA', 1);"; /*iNSERCIÓN PARA IDENTIFICADOR NO AUTOINCREMENTAL*/
+            String insert = "INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (001, 'PEPITO', 'PEREZ');";
 
             Statement st = conn.createStatement();
             int result = st.executeUpdate(insert);
 
-            /*INSERTAR LOGGER INFO
-            * */
-            System.out.printf("Se insertaron %d filas", result);
 
-
+            throw new RuntimeException(e);
         } catch (SQLException e) {
-
-            /*INSERTAR LOGGER ERROR*/
             throw new RuntimeException(e);
         }
 
