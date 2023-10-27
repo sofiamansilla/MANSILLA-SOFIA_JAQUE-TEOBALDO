@@ -4,6 +4,10 @@ import com.backend.parcial.dao.impl.OdontologoDAO;
 import com.backend.parcial.model.Odontologo;
 import com.backend.parcial.service.OdontologoService;
 
+import java.sql.Connection;
+
+import static junit.framework.TestCase.assertNotNull;
+
 public class test {
 
 

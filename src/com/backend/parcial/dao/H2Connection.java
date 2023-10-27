@@ -10,7 +10,7 @@ public class H2Connection {
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
 //        Class.forName("org.h2.Driver");
 
-        String strConn = "jdbc:h2:~/bbdd";
+        String strConn = "jdbc:h2:~/odontologos";
         String user = "sa";
         String password = "1234";
 
