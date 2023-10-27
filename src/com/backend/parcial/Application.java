@@ -25,13 +25,12 @@ public class Application {
             LOGGER.info("Conexión exitosa");
 
 
-            String insert = "INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (001, 'PEPITO', 'PEREZ');";
+            String insert = "INSERT INTO ODONTOLOGOS (MATRICULA, NOMBRE, APELLIDO) VALUES (001, 'PEPITO', 'PEREZ')";
+
 
             Statement st = conn.createStatement();
             int result = st.executeUpdate(insert);
 
-
-            throw new RuntimeException(e);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
