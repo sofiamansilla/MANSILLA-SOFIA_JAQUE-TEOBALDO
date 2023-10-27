@@ -20,26 +20,4 @@ public class H2Connection {
 
 
 
-//catch (Exception e) {
-//        LOGGER.error(e.getMessage());
-//        e.printStackTrace();
-//        if (connection != null) {
-//            try {
-//                connection.rollback();
-//                LOGGER.info("Tuvimos un problema");
-//                LOGGER.error(e.getMessage());
-//                e.printStackTrace();
-//            } catch (SQLException exception) {
-//                LOGGER.error(exception.getMessage());
-//                exception.printStackTrace();
-//            }
-//        }
-//    } finally {
-//        try {
-//            connection.close();
-//        } catch (Exception ex) {
-//            LOGGER.error("No se pudo cerrar la conexion: " + ex.getMessage());
-//        }
-//    }
-
 }

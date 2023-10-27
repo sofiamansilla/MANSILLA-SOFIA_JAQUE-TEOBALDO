@@ -5,30 +5,33 @@ package com.backend.parcial.model;
 public class Odontologo {
 
 
-    private int numeroMatricula;
+    private int matricula;
     private String nombre;
     private String apellido;
     private int id;
 
-    public Odontologo(int numeroMatricula, String nombre, String apellido) {
-        this.numeroMatricula = numeroMatricula;
+    public Odontologo(int matricula, String nombre, String apellido) {
+        this.matricula = matricula;
         this.nombre = nombre;
         this.apellido = apellido;
     }
 
-    public Odontologo(int numeroMatricula, String nombre, String apellido, int id) {
-        this.numeroMatricula = numeroMatricula;
+    public Odontologo(int matricula, String nombre, String apellido, int id) {
+        this.matricula = matricula;
         this.nombre = nombre;
         this.apellido = apellido;
         this.id = id;
     }
 
-    public int getNumeroMatricula() {
-        return numeroMatricula;
+    public Odontologo(int anInt, int matricula, String nombre, String apellido) {
     }
 
-    public void setNumeroMatricula(int numeroMatricula) {
-        this.numeroMatricula = numeroMatricula;
+    public int getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(int matricula) {
+        this.matricula = matricula;
     }
 
     public String getNombre() {
@@ -59,7 +62,7 @@ public class Odontologo {
     @Override
     public String toString() {
         return "Odontologo{" +
-                "numeroMatricula=" + numeroMatricula +
+                "matricula=" + matricula +
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
                 ", id=" + id +
